@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Vavuniya - Canteen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #8B0000 0%, #6B0000 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .header {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .logo {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 2rem;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .header h1 {
+            color: #8B0000;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex: 1;
+        }
+        
+        .btn-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .btn-card h2 {
+            color: #8B0000;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .btn-card p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #8B0000;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #6B0000;
+        }
+        
+        .btn-admin {
+            background: #2C3E50;
+        }
+        
+        .btn-admin:hover {
+            background: #1a242f;
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .footer p {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+        
+        .footer strong {
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 2rem 1.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .header h1 {
+                font-size: 1.7rem;
+            }
+            
+            .buttons {
+                grid-template-columns: 1fr;
+                margin-bottom: 2rem;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"><img src="assets/images/logo.png" alt="University Logo"></div>
+            <h1>University of Vavuniya</h1>
+            <p>Canteen Management System</p>
+        </div>
+        
+        <div class="buttons">
+            <div class="btn-card">
+                <h2>👨‍🎓 Student</h2>
+                <p>Login or create account</p>
+                <a href="frontend/signup.php" class="btn">Create Account</a>
+                <p style="margin-top: 1rem; color: #999; font-size: 0.85rem;"><a href="frontend/login.php" style="color: #8B0000;">Login</a></p>
+            </div>
+            
+            <div class="btn-card">
+                <h2>👨‍💼 Admin</h2>
+                <p>Login to dashboard</p>
+                <a href="admin/login.php" class="btn btn-admin">Admin Login</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p><strong>University of Vavuniya - Canteen Management System</strong></p>
+        <p>&copy; 2026 All Rights Reserved</p>
+    </footer>
+</body>
+</html>
